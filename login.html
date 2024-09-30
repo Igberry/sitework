@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - EduLearn</title>
+  <link rel="icon" type="image/webp" href="images/hero1.webp">
+  <link rel="stylesheet" href="styles/login.css">
+</head>
+<body>
+
+  <!-- Reused Header from Home Page -->
+  <header>
+    <nav>
+        <div class="logo">EduLearn</div>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="courses.html">Courses</a></li>
+          <li><a href="about-us.html">About Us</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="login.html">Login</a></li>
+        </ul>
+        <div class="hamburger" id="hamburger">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </div>
+      </nav>
+  </header>
+
+  <!-- Login Form Section -->
+  <section class="login-section">
+    <div class="login-container">
+      <h2>Student Login</h2>
+      <form id="loginForm">
+        <label for="studentID">Student ID</label>
+        <input type="text" id="studentID" name="studentID" placeholder="Enter your Student ID" required>
+
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Enter your Password" required>
+
+        <a href="dashboard/dashboard.html" id="loginButton" class="login-btn">Login</a>
+        
+        <p class="error-message" id="errorMessage"></p>
+      </form>
+    </div>
+  </section>
+
+  <!-- Reused Footer from Home Page -->
+  <footer>
+    <p>© 2024 EduLearn. All rights reserved.</p>
+  </footer>
+
+  <script src="scripts/login.js"></script>
+</body>
+</html>
