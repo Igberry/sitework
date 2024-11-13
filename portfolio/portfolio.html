@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David Igberi - Front-End Developer Portfolio</title>
+    <link rel="stylesheet" href="styles/portfolio.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>David C. Igberi | Portfolio Page</h1>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <img src="images/My pic.jpg" alt="Image of Me">
+        <h2>Hi, I'm David C. Igberi</h2>
+        <p>Creative Web Developer | Front-End Expert</p>
+        <button onclick="scrollToSection('contact')">Hire Me</button>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>A passionate front-end developer specializing in creating dynamic, responsive websites. Skilled in HTML, CSS, JavaScript, and web design trends.</p>
+    </section>
+
+    <section id="services">
+        <h2>My Services</h2>
+        <div class="service-card">
+            <h3>Web Development</h3>
+            <p>Creating responsive, user-friendly websites.</p>
+        </div>
+        <div class="service-card">
+            <h3>UI/UX Design</h3>
+            <p>Designing engaging and intuitive interfaces.</p>
+        </div>
+        <div class="service-card">
+            <h3>App Development</h3>
+            <p>Building cross-platform mobile applications.</p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Featured Projects</h2>
+        <div class="project-card" onclick="showProjectDetails('Project 1')">
+            <img src="images/hero1.webp" alt="edulearnimage">
+            <h3>EduLearn</h3>
+            <p>Short description of Project 1</p>
+            <li><a href="https://igberry.github.io/sitework/index.html">Online School Learning</a></li>
+        </div>
+        <div class="project-card" onclick="showProjectDetails('Project 2')">
+            <img src="images/logo.jpg" alt="dcandproh">
+            <h3>DC & PH</h3>
+            <p>Short description of Project 2</p>
+            <li><a href="https://igberry.github.io/dcandproh/about-us.html">Debbie's Catering & Provision Hub</a></li>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form id="contactForm" onsubmit="submitForm(event)">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+        <p id="formMessage"></p>
+    </section>
+    <div class="social-media">
+        <h2>Connect With Us</h2>
+        <div class="social-icons">
+          <a href="https://www.facebook.com/profile.php?id=61554521242861&mibextid=ZbWKwL" target="_blank" class="social-icon">
+            <img src="images/fbicon.png" alt="Facebook">
+          </a>
+          <a href="https://www.instagram.com/ig_berrydc?igsh=NmhvNWlmaWd6c3Vh" target="_blank" class="social-icon">
+            <img src="images/igicon.jpg" alt="Instagram">
+          </a>
+          <a href="https://wa.me/c/2349065080946" target="_blank" class="social-icon">
+            <img src="images/whatsappicon.jpg" alt="WhatsApp">
+          </a>
+          <a href="+2349065080946" class="social-icon">
+            <img src="images/phone.png" alt="Call">
+          </a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 David C. Igberi</p>
+    </footer>
+
+    <script src="script.portfolio.js"></script>
+</body>
+</html>
