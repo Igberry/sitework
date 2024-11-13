@@ -1,0 +1,52 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #3498db;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+section {
+    margin: 2rem;
+    text-align: center;
+}
+
+h1 {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    color: #fff;
+    text-align: center;
+} 
+
+h2 {
+    font-family: Georgia, serif;
+    color: #3498db;
+    text-align: center;
+}
+
+img {
+    width: 400px;
+    height: auto;
+}
+
+ul {
+    list-style-type: disc;
+    padding-left: 2rem;
+}
+
+footer {
+    background-color: #3498db;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}

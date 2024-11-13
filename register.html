@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Student Registration - EduLearn</title>
+  <meta name="description" content="Wdd131 End of Course Project">
+  <meta name="author" content="David Chukwudi Igberi">
+  <link rel="stylesheet" href="styles/project.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">EduLearn</div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
+  </header>
+
+  <section class="registration-form">
+    <h2>Student Registration</h2>
+    <form id="registration-form">
+      <label for="full-name">Full Name</label>
+      <input type="text" id="full-name" required>
+
+      <label for="email">Email</label>
+      <input type="text" id="email" required>
+
+      <label for="dob">Date of Birth</label>
+      <input type="date" id="dob" required>
+
+      <label for="sex">Sex</label>
+      <select id="sex" required>
+        <option value="">Please select an option</option>
+      </select>
+
+      <label for="country">Country</label>
+      <select id="country" required>
+        <option value="">Please select an option</option>
+      </select>
+
+      <label for="state">State/Region</label>
+      <input type="text" id="state" required>
+
+      <label for="city">City</label>
+      <input type="text" id="city" required>
+
+      <label for="address">Residential Address</label>
+      <textarea id="address" required></textarea>
+
+      <label for="course">Course of Interest</label>
+      <select id="course" required>
+        <option value="">Please select an option</option>
+      </select>
+
+      <label for="resume-date">Date Available to Resume</label>
+      <input type="date" id="resume-date" required>
+
+      <button type="submit">Register</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>David Chukwudi Igberi - WDD131 Dynamic Web Fundamentals - Project</p>
+    <p>&copy; 2024 EduLearn. All Rights Reserved.</p>
+  </footer>
+  <script src="scripts/register.js"></script>
+</body>
+</html>

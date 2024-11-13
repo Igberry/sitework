@@ -1,0 +1,731 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+  
+  /* Header */
+header {
+    background-color: #3498db;
+    padding: 1rem;
+    color: white;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+  
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+  
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+  
+.nav-links li {
+    margin-left: 2rem;
+}
+  
+.nav-links a {
+    color: black;
+    background-color: white;
+    padding: 3px;
+    border-radius: 7px;
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 1rem;
+}
+  
+.nav-links a:hover {
+    color: white;
+    background-color: black;
+}
+  
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+  
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+  
+  /* Hero Section */
+.hero {
+    background-image: url('../images/hero1.webp'); /* Path to the hero image */
+    background-size: cover; /* Ensures the image covers the entire section */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the image from repeating */
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative; /* Optional: makes the content stay on top */
+}
+  
+.hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Optional: darkens the image */
+    z-index: 1; /* Ensures the overlay is on top */
+}
+  
+.hero-content {
+    position: relative; /* Makes the content sit above the overlay */
+    z-index: 2;
+}
+  
+.hero h1 {
+    font-size: 3rem;
+    color: gold;
+    background-color: black;
+    border-radius: 10px;
+}
+  
+.hero p {
+    margin: 1.5rem 0;
+    font-size: 1.2rem;
+    color: black;
+    background-color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+  
+#explore-btn {
+    background-color: #f1c40f;
+    color: black;
+    padding: 1rem 2rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+.apply {
+    padding: 1rem 2rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+.apply a {
+    background-color: #f1c40f;
+    color: black;
+    font-weight: bold;
+    padding: 20px;
+    border-radius: 5px;
+}
+.apply :hover {
+    background-color: white;
+}
+  
+#explore-btn:hover {
+    background-color: white;
+}
+  
+  /* Courses Section */
+.courses {
+    padding: 4rem 2rem;
+    background-color: #ecf0f1;
+    text-align: center;
+}
+  
+.course-grid {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2rem;
+}
+  
+.course-item {
+    background-color: white;
+    padding: 1.5rem;
+    width: 30%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+  
+.course-item h3 {
+    color: #3498db;
+    margin-bottom: 1rem;
+}
+  
+.course-item p {
+    font-size: 1rem;
+}
+  
+  /* About Section */
+.about {
+    padding: 4rem 2rem;
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+  
+  /* Contact Section */
+.contact {
+    padding: 4rem 2rem;
+    background-color: #ecf0f1;
+}
+  
+.contact form {
+    display: flex;
+    flex-direction: column;
+    max-width: 500px;
+    margin: 0 auto;
+}
+  
+.contact label {
+    margin: 0.5rem 0;
+}
+  
+.contact input, .contact textarea {
+    padding: 0.7rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.contact button {
+    background-color: #3498db;
+    color: black;
+    font-weight: bold;
+    border: none;
+    padding: 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+}
+  
+.contact button:hover {
+    background-color: black;
+    color: white;
+}
+
+  /* Login Section */
+  .login-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+    background-color: #f4f4f4;
+}
+  
+.login-container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    width: 350px;
+    margin-top: 50px;
+}
+  
+.login-container h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+  
+.login-container label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}
+  
+.login-container input {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1.25rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+/* Login Button Style */
+.login-btn {
+    display: block;
+    text-align: center;
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #3498db;
+    color: black;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    text-decoration: none;
+    margin-top: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+  
+.login-btn:hover {
+    background-color: black;
+    color: white;
+}
+  
+  
+  /* Footer */
+footer {
+    padding: 1rem;
+    background-color: #3498db;
+    text-align: center;
+    color: black;
+}
+
+.registration-form {
+    max-width: 600px;
+    background-color: white;
+    padding: 2rem;
+    margin: 6rem auto;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+.registration-form h2 {
+    text-align: center;
+    color: #3498db;
+    margin-bottom: 2rem;
+    font-size: 2rem;
+}
+
+.registration-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.registration-form label {
+    margin-bottom: 0.5rem;
+    color: #333;
+    font-weight: bold;
+}
+
+.registration-form input, .registration-form select, .registration-form textarea {
+    padding: 0.8rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.registration-form textarea {
+    height: 100px;
+    resize: none;
+}
+
+.registration-form button {
+    padding: 1rem;
+    background-color: #3498db;
+    color: black;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1.1rem;
+}
+
+.registration-form button:hover {
+    background-color: black;
+    color: white;
+}
+ /* About Us Section */
+ .about-section {
+    padding: 3rem 2rem;
+    background-color: #f4f4f4;
+  }
+  
+  .about-section h1 {
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: #333;
+  }
+  
+  .about-section p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #666;
+}
+  
+.team {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+  
+.team h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+  
+.team-members {
+    display: flex;
+    gap: 20px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+  
+.member {
+    text-align: center;
+}
+  
+.member img {
+    width: 200px;
+    height: 200px;
+    border-radius: 30px;
+    margin-bottom: 1rem;
+}
+  
+.member h3 {
+    font-size: 1.5rem;
+    color: #333;
+}
+  
+.member p {
+    font-size: 1rem;
+    color: black;
+}
+  
+  /* Social Media Section */
+.social-media {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+  
+.social-media h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+  
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+
+.social-icon img {
+    width: 50px;
+    height: auto;
+    border-radius: 15px;
+}
+  
+.social-icon {
+    font-size: 1.5rem;
+    color: #3498db;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s ease;
+}
+  
+.social-icon i {
+    font-size: 2rem;
+}
+  
+.social-icon:hover {
+    color: #2980b9;
+}
+  /* Courses Section */
+  .courses-section {
+    padding: 3rem 3rem;
+    background-color: #f4f4f4;
+}
+  
+.courses-section h1 {
+    text-align: center;
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    color: #333;
+}
+  
+.courses-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+  
+.course-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 1rem;
+    transition: transform 0.3s ease;
+}
+  
+.course-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;
+}
+  
+.course-card h3 {
+    font-size: 1.5rem;
+    margin: 1rem 0;
+    color: #333;
+}
+  
+.course-card p {
+    font-size: 1rem;
+    color: #666;
+}
+  
+.course-card:hover {
+    transform: translateY(-5px);
+}
+  /* Dashboard */
+  .dashboard {
+    display: flex;
+    padding: 2rem;
+    margin-top: 4rem;
+}
+  
+.sidebar {
+    width: 250px;
+    background-color: #2c3e50;
+    padding: 2rem;
+    color: white;
+}
+  
+.sidebar h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+  
+.sidebar ul {
+    list-style: none;
+}
+  
+.sidebar ul li {
+    margin-bottom: 1.5rem;
+}
+  
+.sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+  
+.sidebar ul li a:hover {
+    color: #3498db;
+}
+  
+.content {
+    flex-grow: 1;
+    padding: 2rem;
+    background-color: #f4f4f4;
+    font-family: Arial, Helvetica, sans-serif;
+}
+  
+.content h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+}
+  
+#dashboardContent {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+/* Contact Section */
+.contact-section {
+    padding: 3rem 2rem;
+    background-color: #f4f4f4;
+}
+  
+.contact-section h1 {
+    text-align: center;
+    background-color: #3498db;
+    border-radius: 50px;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+  
+.contact-section p {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #666;
+}
+  
+form {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+  
+.form-group {
+    margin-bottom: 1.5rem;
+}
+  
+label {
+    font-weight: bold;
+}
+  
+input, textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+  
+button {
+    padding: 0.75rem;
+    background-color: #3498db;
+    color: black;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+  
+button:hover {
+    background-color: black;
+    color: white;
+}
+  
+#responseMessage {
+    margin-top: 1.5rem;
+    text-align: center;
+    color: #333;
+}
+  /* Mobile Menu */
+@media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background-color: #3498db;
+      position: absolute;
+      top: 70px;
+      right: 0;
+      width: 100%;
+      padding: 1rem;
+    }
+  
+    .nav-links.active {
+      display: flex;
+    }
+  
+    .nav-links li {
+      margin: 1.5rem 0;
+      text-align: center;
+    }
+  
+    .hamburger {
+      display: flex;
+    }
+    .course-grid {
+        flex-direction: column;
+    }
+    
+    .course-item {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+    .registration-form {
+          margin: 4rem 1rem;
+          padding: 1.5rem;
+    }
+  
+    .registration-form h2 {
+          font-size: 1.8rem;
+    }
+  
+    .registration-form input, .registration-form select, .registration-form textarea {
+          font-size: 1rem;
+    }
+  
+    .registration-form button {
+          font-size: 1rem;
+    }
+    .login-container {
+        width: 90%;
+    }
+    .about-section h1 {
+        font-size: 2rem;
+    }
+    .team-members {
+        display: block;
+    }
+    .member img {
+        width: 250px;
+        height: 200px;
+    }
+    .courses-section h1 {
+        font-size: 2rem;
+    }
+    
+    .course-card {
+        padding: 0.5rem;
+    }
+    
+    .course-card h3 {
+        font-size: 1.25rem;
+    }
+    
+    .course-card p {
+        font-size: 0.9rem;
+    }
+    .dashboard {
+        flex-direction: column;
+      }
+    
+    .sidebar {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .content {
+        padding: 1rem;
+    }
+}
+  
