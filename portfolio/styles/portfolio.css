@@ -82,7 +82,11 @@ section {
     margin: 1rem auto;
     max-width: 800px;
     text-align: center;
-    font-weight: bold;
+    color: black;
+}
+
+#about p {
+    color: white;
 }
 
 #projects img {
