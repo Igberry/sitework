@@ -6,14 +6,14 @@
 }
 
 body {
-    background-color: gold;
-    color: #333;
+    background-color: black;
+    color: white;
     line-height: 1.6;
 }
 
 header {
-    background: #333;
-    color: #fff;
+    background: gold;
+    color: black;
     padding: 1rem 2rem;
     text-align: center;
 }
@@ -26,37 +26,48 @@ nav ul {
 }
 
 nav ul li a {
-    color: black;
+    color: white;
     text-decoration: none;
-    background-color: gold;
+    background-color: black;
     padding: 4px;
     border-radius: 5px;
+    font-weight: bold;
 }
 
 nav ul li :hover {
-    color: white;
-    background-color: black;
+    background-color: white;
+    color: black;
 }
 
 #hero {
     background: url('My pic.jpg') no-repeat center center/cover;
-    color: #333;
+    color: white;
+    font-size: 1.5em;
     padding: 4rem 2rem;
     text-align: center;
     font-weight: bold;
+
 }
 
 h2 {
-    background-color: #333;
-    color: #fff;
+    background-color: white;
+    color: black;
     border-radius: 7px;
     font-family: Arial, Helvetica, sans-serif;
+}
+
+h3 {
+    color: black;
+    background-color: gold;
+    border-radius: 20px;
 }
 
 #hero img {
     width: 300px;
     height: auto;
-    border-radius: 50px;
+    border-radius: 60px;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
     align-items: center;
     justify-content: center;
 }
@@ -67,8 +78,8 @@ h2 {
 }
 
 section {
-    padding: 2rem;
-    margin: 2rem auto;
+    padding: 1rem;
+    margin: 1rem auto;
     max-width: 800px;
     text-align: center;
     font-weight: bold;
@@ -88,6 +99,8 @@ section {
     padding: 1rem;
     margin: 1rem;
     border-radius: 20px;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
     cursor: pointer;
     transition: transform 0.3s ease;
 }
@@ -103,23 +116,24 @@ form button {
     width: 100%;
     padding: 0.5rem;
     margin: 0.5rem 0;
-    border: 1px solid #ddd;
+    border: 2px solid gold;
     border-radius: 5px;
+    background-color: black;
 }
 
 form button {
-    background: #333;
-    color: #fff;
+    background-color: gold;
+    color: black;
     cursor: pointer;
+    font-weight: bold;
+}
+
+form button:hover {
+    background-color: white;
+    color: black;
 }
 
 social-media {
-    text-align: center;
-}
-
-.social-media h2 {
-    margin-bottom: 1.5rem;
-    color: #fff;
     text-align: center;
 }
 
@@ -130,7 +144,7 @@ social-media {
 }
 
 .social-icon img {
-    width: 50px;
+    width: 40px;
     height: auto;
     border-radius: 15px;
 }
@@ -155,8 +169,10 @@ social-media {
 
 footer {
     text-align: center;
-    background-color: #333;
-    color: white;
+    background-color: gold;
+    color: black;
+    font-weight: bold;
+    margin-top: 20px;
 }
 
 @media only screen and (max-width: 600px) {
