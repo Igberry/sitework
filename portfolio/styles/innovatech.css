@@ -1,0 +1,261 @@
+/* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #333;
+    color: #fff;
+}
+
+/* Hero Section */
+.hero {
+    background-color: #ff6d00;
+    text-align: center;
+    padding: 2rem;
+    position: relative;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+}
+
+.hero p {
+    font-size: 1rem;
+    margin: 0.5rem 0;
+}
+
+.hero button {
+    background-color: #fff;
+    color: #ff6d00;
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.hero img {
+    max-width: 200px;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    border-radius: 30px;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+/* Feature Section */
+.feature {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    border-bottom: 1px solid #444;
+}
+
+.feature img {
+    max-width: 200px;
+    margin-right: 1.5rem;
+    border-radius: 30px;
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.feature h2, .feature h3 {
+    color: #ff6d00;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.feature p {
+    font-size: 0.9rem;
+}
+
+.feature button {
+    background-color: #ff6d00;
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+
+/* Reverse Feature Layout */
+.feature.reverse {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* Gallery Section */
+.gallery {
+    text-align: center;
+    padding: 2rem;
+    background-color: #222;
+}
+
+.gallery h3 {
+    color: #ff6d00;
+    font-size: 1.5rem;
+}
+
+.gallery-images {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.gallery-images img {
+    max-width: 100%;
+    border-radius: 8px;
+}
+
+/* Responsive Design */
+
+/* Mobile View - max-width: 600px */
+@media (max-width: 600px) {
+    .hero {
+        padding: 1rem;
+    }
+
+    .hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero img {
+        max-width: 150px;
+        position: static;
+        margin-top: 1rem;
+    }
+
+    .feature {
+        flex-direction: column;
+        padding: 1rem;
+        text-align: center;
+    }
+
+    .feature img {
+        margin: 0 0 1rem 0;
+        max-width: 100%;
+    }
+
+    .gallery-images {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Tablet View - max-width: 800px */
+@media (max-width: 800px) {
+    .hero {
+        padding: 1.5rem;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .hero img {
+        max-width: 150px;
+        position: static;
+        margin-top: 1rem;
+    }
+
+    .feature {
+        flex-direction: column;
+        padding: 1.5rem;
+        text-align: center;
+    }
+
+    .feature img {
+        margin: 0 0 1rem 0;
+        max-width: 100%;
+    }
+
+    .feature h2, .feature h3 {
+        font-size: 1.3rem;
+    }
+
+    .gallery-images {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Desktop View - min-width: 600px */
+@media (min-width: 600px) {
+    .feature {
+        flex-direction: row;
+    }
+
+    .feature.reverse {
+        flex-direction: row-reverse;
+    }
+
+    .gallery-images {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Larger Desktop View - min-width: 800px */
+@media (min-width: 800px) {
+    .hero {
+        padding: 3rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        text-align: left;
+    }
+
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero p {
+        font-size: 1.2rem;
+    }
+
+    .hero button {
+        padding: 0.7rem 1.5rem;
+        font-size: 1rem;
+    }
+
+    .hero img {
+        max-width: 250px;
+        position: static;
+        margin-left: 2rem;
+        border-radius: 30px;
+        border-top-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+
+    .feature {
+        padding: 3rem;
+        text-align: left;
+    }
+
+    .feature img {
+        max-width: 300px;
+        margin-right: 2rem;
+    }
+
+    .feature h2, .feature h3 {
+        font-size: 2rem;
+    }
+
+    .gallery {
+        padding: 3rem;
+    }
+
+    .gallery h3 {
+        font-size: 2rem;
+    }
+
+    .gallery-images {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+    }
+}

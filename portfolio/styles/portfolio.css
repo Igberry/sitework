@@ -6,13 +6,13 @@
 }
 
 body {
-    background-color: black;
     color: white;
     line-height: 1.6;
+    background: linear-gradient(to right, black, white, black, white );
 }
 
 header {
-    background: gold;
+    background: linear-gradient(to right, white, gold, white);
     color: black;
     padding: 1rem 2rem;
     text-align: center;
@@ -46,7 +46,6 @@ nav ul li :hover {
     padding: 4rem 2rem;
     text-align: center;
     font-weight: bold;
-
 }
 
 h2 {
