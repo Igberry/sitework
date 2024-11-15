@@ -8,12 +8,13 @@
 /* Body and Global Styles */
 body {
     font-family: 'Playfair Display', montserrat;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: black;
+    color: white;
 }
 
 header {
     background-color: #ff6d00;
+    color: black;
     padding: 1rem 0;
     text-align: center;
     font-family: 'Playfair Display', montserrat;
@@ -42,10 +43,14 @@ header nav li :hover {
     border-top-left-radius: 0;
     border-bottom-right-radius: 0;
 }
+header .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
 
 footer {
     background-color: #ff6d00;
-    color: black;
+    color: white;
     text-align: center;
     padding: 1rem;
     bottom: 0;
@@ -106,6 +111,7 @@ p {
 
 .skills-section .skill-item {
     background-color: #fff;
+    color: black;
     padding: 1.5rem;
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -114,6 +120,7 @@ p {
 .skills-section .skill-item h3 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
+    color: black;
 }
 
 /* Learn More Section */
@@ -126,7 +133,7 @@ p {
 }
 
 .learnmore-section ul li a {
-    color: #333;
+    color: white;
     text-decoration: none;
     font-size: 1.1rem;
 }
@@ -148,9 +155,10 @@ p {
 .hamburger-menu .bar {
     width: 25px;
     height: 4px;
-    background-color: #fff;
+    background-color: black;
     border-radius: 2px;
 }
+
 
 /* Mobile View (max-width: 600px) */
 @media (max-width: 600px) {
@@ -177,7 +185,7 @@ p {
         display: flex;
     }
 
-    header nav ul.active {
+    header nav ul .active {
         display: block;
     }
 }
