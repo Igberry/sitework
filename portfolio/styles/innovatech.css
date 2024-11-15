@@ -9,31 +9,48 @@ body {
 
 /* Hero Section */
 .hero {
-    background-color: #ff6d00;
-    color: black;
+    background-image: url('pattern2.avif'); /* Replace with your pattern image URL */
+    background-repeat: repeat; /* Ensures the pattern repeats across the entire section */
+    background-size: 1000px; /* Adjusts the pattern size */
     text-align: center;
     padding: 2rem;
     position: relative;
+    border-radius: 0 0 50px 50px; /* Optional: Adds a rounded-bottom effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adds depth */
+    border: 3px solid white;
 }
 
 .hero h1 {
     font-size: 2.5rem;
     font-family: 'Playfair Display', montserrat;
+    color: white; /* Darker text for readability */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Adds subtle depth */
+    text-align: center;
 }
 
 .hero p {
-    font-size: 1rem;
+    font-size: 2rem;
     margin: 0.5rem 0;
+    color: white; /* Slightly lighter than the h1 color */
+    font-weight: bold;
+    text-align: center;
 }
 
 .hero button {
-    background-color: black;
+    background-color: #ff6d00; /* Matches the h1 text color */
     color: white;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1.5rem;
     margin: 0.5rem;
     border: none;
     cursor: pointer;
     font-size: 1rem;
+    border-radius: 25px; /* Rounded button */
+    transition: transform 0.3s, box-shadow 0.3s; /* Add hover effects */
+}
+
+.hero button:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Glow effect */
 }
 
 .hero img {
@@ -41,10 +58,11 @@ body {
     position: absolute;
     top: 1rem;
     right: 1rem;
-    border-radius: 30px;
-    border-top-left-radius: 0;
-    border-bottom-right-radius: 0;
+    border-radius: 20px;
+    border: 3px solid #ff6d00; /* Matches one of the gradient colors */
+    image-rendering: crisp-edges; /* Improves clarity for certain cases */
 }
+
 
 /* Feature Section */
 .feature {
@@ -59,8 +77,7 @@ body {
     max-width: 200px;
     margin-right: 1.5rem;
     border-radius: 30px;
-    border-top-left-radius: 0;
-    border-bottom-right-radius: 0;
+    border: 3px solid #ff6d00;
 }
 
 .feature h2, .feature h3 {
@@ -70,7 +87,8 @@ body {
 }
 
 .feature p {
-    font-size: 0.9rem;
+    font-size: 1.2rem;
+    font-weight: bold;
 }
 
 .feature button {
@@ -81,6 +99,7 @@ body {
     cursor: pointer;
     margin-bottom: 10px;
     border-radius: 5px;
+    border: 3px solid white;
 }
 
 /* Reverse Feature Layout */
@@ -95,6 +114,8 @@ body {
     text-align: center;
     padding: 2rem;
     background-color: #222;
+    font-weight: bold;
+    font-size: 1.2rem;
 }
 
 .gallery h3 {
@@ -112,8 +133,7 @@ body {
 .gallery-images img {
     max-width: 100%;
     border-radius: 20px;
-    border-top-left-radius: 0;
-    border-bottom-right-radius: 0;
+    border: 3px solid #ff6d00;
 }
 
 footer {
@@ -121,6 +141,7 @@ footer {
     padding: 20px;
     text-align: center;
     color: black;
+    border: 3px solid white;
 }
 
 /* Responsive Design */
@@ -240,8 +261,6 @@ footer {
         position: static;
         margin-left: 2rem;
         border-radius: 30px;
-        border-top-left-radius: 0;
-        border-bottom-right-radius: 0;
     }
 
     .feature {
