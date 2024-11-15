@@ -9,48 +9,61 @@ body {
 
 /* Hero Section */
 .hero {
-    background-image: url('pattern2.avif'); /* Replace with your pattern image URL */
-    background-repeat: repeat; /* Ensures the pattern repeats across the entire section */
-    background-size: 1000px; /* Adjusts the pattern size */
+    background-image: url('pattern2.avif');
+    /* Replace with your pattern image URL */
+    background-repeat: repeat;
+    /* Ensures the pattern repeats across the entire section */
+    background-size: 1000px;
+    /* Adjusts the pattern size */
     text-align: center;
     padding: 2rem;
     position: relative;
-    border-radius: 0 0 50px 50px; /* Optional: Adds a rounded-bottom effect */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adds depth */
+    border-radius: 0 0 50px 50px;
+    /* Optional: Adds a rounded-bottom effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    /* Adds depth */
     border: 3px solid white;
 }
 
 .hero h1 {
     font-size: 2.5rem;
     font-family: 'Playfair Display', montserrat;
-    color: white; /* Darker text for readability */
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Adds subtle depth */
+    color: white;
+    /* Darker text for readability */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    /* Adds subtle depth */
     text-align: center;
 }
 
 .hero p {
     font-size: 2rem;
     margin: 0.5rem 0;
-    color: white; /* Slightly lighter than the h1 color */
+    color: white;
+    /* Slightly lighter than the h1 color */
     font-weight: bold;
     text-align: center;
 }
 
 .hero button {
-    background-color: #ff6d00; /* Matches the h1 text color */
+    background-color: #ff6d00;
+    /* Matches the h1 text color */
     color: white;
     padding: 0.5rem 1.5rem;
     margin: 0.5rem;
     border: none;
     cursor: pointer;
     font-size: 1rem;
-    border-radius: 25px; /* Rounded button */
-    transition: transform 0.3s, box-shadow 0.3s; /* Add hover effects */
+    border-radius: 25px;
+    /* Rounded button */
+    transition: transform 0.3s, box-shadow 0.3s;
+    /* Add hover effects */
 }
 
 .hero button:hover {
-    transform: scale(1.05); /* Slight zoom on hover */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Glow effect */
+    transform: scale(1.05);
+    /* Slight zoom on hover */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    /* Glow effect */
 }
 
 .hero img {
@@ -59,8 +72,10 @@ body {
     top: 1rem;
     right: 1rem;
     border-radius: 20px;
-    border: 3px solid #ff6d00; /* Matches one of the gradient colors */
-    image-rendering: crisp-edges; /* Improves clarity for certain cases */
+    border: 3px solid #ff6d00;
+    /* Matches one of the gradient colors */
+    image-rendering: crisp-edges;
+    /* Improves clarity for certain cases */
 }
 
 
@@ -80,7 +95,8 @@ body {
     border: 3px solid #ff6d00;
 }
 
-.feature h2, .feature h3 {
+.feature h2,
+.feature h3 {
     color: #ff6d00;
     font-size: 1.5rem;
     margin: 0;
@@ -170,7 +186,8 @@ footer {
 
     .feature img {
         margin: 0 0 1rem 0;
-        max-width: 100%;
+        width: 200px;
+        height: auto;
     }
 
     .gallery-images {
@@ -206,10 +223,12 @@ footer {
 
     .feature img {
         margin: 0 0 1rem 0;
-        max-width: 100%;
+        width: 200px;
+        height: auto;
     }
 
-    .feature h2, .feature h3 {
+    .feature h2,
+    .feature h3 {
         font-size: 1.3rem;
     }
 
@@ -273,7 +292,8 @@ footer {
         margin-right: 2rem;
     }
 
-    .feature h2, .feature h3 {
+    .feature h2,
+    .feature h3 {
         font-size: 2rem;
     }
 
