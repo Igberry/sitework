@@ -223,7 +223,6 @@ p {
         display: flex;
     }
 }
-
 /* Desktop View (min-width: 600px) */
 @media (min-width: 600px) {
     #nav-links {
