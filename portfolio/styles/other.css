@@ -190,12 +190,14 @@ p {
         display: none; /* Default state */
         flex-direction: column;
         text-align: center;
-        position: absolute;
+        position: static;
         top: 60px;
         left: 0;
-        width: 100%;
-        background-color: #333;
+        width: 200px;
         padding: 1rem 0;
+        background-color: white;
+        border-bottom-left-radius: 30px;
+        border-top-right-radius: 30px;
     }
 
     /* Show the nav-links when the active class is added */
@@ -209,8 +211,10 @@ p {
 
     #nav-links a {
         font-size: 1.2rem;
+        background-color: #ff6d00;
+        padding: 7px;
+        border-radius: 10px;
     }
-
     .hamburger-menu {
         display: flex;
     }
