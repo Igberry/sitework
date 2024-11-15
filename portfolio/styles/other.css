@@ -180,29 +180,29 @@ p {
 
 /* Mobile View (max-width: 600px) */
 @media (max-width: 600px) {
-    /* Ensure the 'active' class displays the nav-links */
+    /* Hide the nav-links by default */
     #nav-links {
         display: none; /* Default state */
-        width: 100%;
+        flex-direction: column;
         text-align: center;
         position: absolute;
         top: 60px;
         left: 0;
+        width: 100%;
         background-color: #333;
-        padding: 1rem;
-        flex-direction: column; /* Ensure vertical alignment in mobile view */
+        padding: 1rem 0;
     }
 
+    /* Show the nav-links when the active class is added */
     #nav-links.active {
-        display: flex; /* Show the nav-links when active */
+        display: flex;
     }
 
-
-    #nav-links ul li {
+    #nav-links li {
         margin: 1rem 0;
     }
 
-    #nav-links ul li a {
+    #nav-links a {
         font-size: 1.2rem;
     }
 
@@ -213,8 +213,8 @@ p {
 
 /* Desktop View (min-width: 600px) */
 @media (min-width: 600px) {
-    #nav-links ul {
-        display: flex;
+    #nav-links {
+        display: flex; /* Always visible on desktop */
     }
 
     .hamburger-menu {
