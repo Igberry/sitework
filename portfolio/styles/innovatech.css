@@ -6,7 +6,6 @@ body {
     background-color: #333;
     color: #fff;
 }
-
 /* Hero Section */
 .hero {
     background-image: url('pattern2.avif');
@@ -24,7 +23,6 @@ body {
     /* Adds depth */
     border: 3px solid white;
 }
-
 .hero h1 {
     font-size: 2.5rem;
     font-family: 'Playfair Display', montserrat;
@@ -56,12 +54,10 @@ body {
     border: 3px solid white;
     transition: transform 0.3s, box-shadow 0.3s;
 }
-
 .hero button:hover {
     transform: scale(1.05);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
 }
-
 .hero img {
     max-width: 200px;
     position: absolute;
@@ -71,7 +67,6 @@ body {
     border: 3px solid #ff6d00;
     image-rendering: crisp-edges;
 }
-
 .feature {
     display: flex;
     align-items: center;
@@ -80,26 +75,21 @@ body {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 1.2rem;
 }
-
 .feature img {
     max-width: 200px;
     margin-right: 1.5rem;
     border-radius: 30px;
     border: 3px solid #ff6d00;
 }
-
-.feature h2,
-.feature h3 {
+.feature h2, .feature h3 {
     color: #ff6d00;
     font-size: 1.5rem;
     margin: 0;
 }
-
 .feature p {
     font-size: 1.2rem;
     font-weight: bold;
 }
-
 .feature button {
     background-color: #ff6d00;
     color: #fff;
@@ -110,14 +100,12 @@ body {
     border-radius: 5px;
     border: 3px solid white;
 }
-
 /* Reverse Feature Layout */
 .feature.reverse {
     display: flex;
     align-items: center;
     padding: 2rem;
 }
-
 /* Gallery Section */
 .gallery {
     text-align: center;
@@ -127,25 +115,21 @@ body {
     font-size: 1.2rem;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
-
 .gallery h3 {
     color: #ff6d00;
     font-size: 1.5rem;
 }
-
 .gallery-images {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
     margin-top: 1rem;
 }
-
 .gallery-images img {
     max-width: 100%;
     border-radius: 20px;
     border: 3px solid #ff6d00;
 }
-
 /* Social Media Section */
 .social-media {
     text-align: center;
@@ -154,26 +138,22 @@ body {
     border: 3px solid #ff6d00;
     border-radius: 30px;
 }
-  
 .social-media h2 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
     color: #333;
 }
-  
 .social-icons {
     display: flex;
     justify-content: center;
     gap: 2rem;
-  }
-
+}
 .social-icon img {
     width: 50px;
     height: auto;
     border-radius: 15px;
     border: 3px solid white;
 }
-  
 .social-icon {
     font-size: 1.5rem;
     color: #3498db;
@@ -183,15 +163,12 @@ body {
     gap: 0.5rem;
     transition: color 0.3s ease;
 }
-  
 .social-icon i {
     font-size: 2rem;
-}
-  
+} 
 .social-icon:hover {
     color: #2980b9;
 }
-
 footer {
     background-color: #ff6d00;
     padding: 20px;
@@ -201,37 +178,30 @@ footer {
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
 }
-
 /* Responsive Design */
-
 /* Mobile View - max-width: 600px */
 @media (max-width: 600px) {
     .hero {
         padding: 1rem;
     }
-
     .hero h1 {
         font-size: 1.8rem;
     }
-
     .hero img {
         max-width: 150px;
         position: static;
         margin-top: 1rem;
     }
-
     .feature {
         flex-direction: column;
         padding: 1rem;
         text-align: center;
     }
-
     .feature img {
         margin: 0 0 1rem 0;
         width: 200px;
         height: auto;
     }
-
     .gallery-images {
         grid-template-columns: 1fr;
     }
@@ -242,38 +212,31 @@ footer {
     .hero {
         padding: 1.5rem;
     }
-
     .hero h1 {
         font-size: 2rem;
     }
-
     .hero p {
         font-size: 0.9rem;
     }
-
     .hero img {
         max-width: 150px;
         position: static;
         margin-top: 1rem;
     }
-
     .feature {
         flex-direction: column;
         padding: 1.5rem;
         text-align: center;
     }
-
     .feature img {
         margin: 0 0 1rem 0;
         width: 200px;
         height: auto;
     }
-
     .feature h2,
     .feature h3 {
         font-size: 1.3rem;
     }
-
     .gallery-images {
         grid-template-columns: 1fr;
     }
@@ -284,11 +247,9 @@ footer {
     .feature {
         flex-direction: row;
     }
-
     .feature.reverse {
         flex-direction: row-reverse;
     }
-
     .gallery-images {
         grid-template-columns: repeat(2, 1fr);
     }
@@ -303,50 +264,40 @@ footer {
         align-items: center;
         text-align: left;
     }
-
     .hero h1 {
         font-size: 3rem;
     }
-
     .hero p {
         font-size: 1.2rem;
     }
-
     .hero button {
         padding: 0.7rem 1.5rem;
         font-size: 1rem;
     }
-
     .hero img {
         max-width: 250px;
         position: static;
         margin-left: 2rem;
         border-radius: 30px;
     }
-
     .feature {
         padding: 3rem;
         text-align: left;
     }
-
     .feature img {
         max-width: 300px;
         margin-right: 2rem;
     }
-
     .feature h2,
     .feature h3 {
         font-size: 2rem;
     }
-
     .gallery {
         padding: 3rem;
     }
-
     .gallery h3 {
         font-size: 2rem;
     }
-
     .gallery-images {
         grid-template-columns: repeat(3, 1fr);
         gap: 1.5rem;
