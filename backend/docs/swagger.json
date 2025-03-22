@@ -1,0 +1,53 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Online Learning Platform API",
+        "version": "1.0.0"
+    },
+    "paths": {
+        "/courses": {
+            "get": {
+                "summary": "Get all courses",
+                "responses": {
+                    "200": {
+                        "description": "List of courses"
+                    }
+                }
+            },
+            "post": {
+                "summary": "Add a new course",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/Course"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "Course created"
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "Course": {
+            "type": "object",
+            "properties": {
+                "title": {
+                    "type": "string"
+                },
+                "description": {
+                    "type": "string"
+                },
+                "price": {
+                    "type": "number"
+                }
+            }
+        }
+    }
+}
