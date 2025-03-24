@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,28 +10,30 @@
   <link rel="icon" type="image/webp" href="images/hero1.webp">
   <link rel="stylesheet" href="styles/project.css">
 </head>
+
 <body>
 
   <!-- Reused Header from Home Page -->
   <header>
     <nav>
-        <div class="logo">EduLearn</div>
-        <ul class="nav-links" id="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="courses.html">Courses</a></li>
-          <li><a href="about-us.html">About Us</a></li>
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="register.html">Register</a></li>
-          <li><a href="login.html">Login</a></li>
-        </ul>
-        <div class="hamburger" id="hamburger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
-      </nav>
+      <div class="logo">EduLearn</div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="courses.html">Courses</a></li>
+        <li><a href="about-us.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="register.html">Register</a></li>
+        <li><a href="login.html">Login</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
   </header>
 
+  <!-- Login Form Section -->
   <!-- Login Form Section -->
   <section class="login-section">
     <div class="login-container">
@@ -43,11 +46,17 @@
         <input type="password" id="password" name="password" placeholder="Enter your Password" required>
 
         <a href="dashboard.html" id="loginButton" class="login-btn">Login</a>
-        
+
         <p class="error-message" id="errorMessage"></p>
       </form>
+
+      <!-- Sign-Up Section -->
+      <div class="signup-container">
+        <p>Don't have an account? <a href="register.html" class="signup-link">Create one here</a></p>
+      </div>
     </div>
   </section>
+
 
   <!-- Reused Footer from Home Page -->
   <footer>
@@ -57,4 +66,5 @@
 
   <script src="scripts/login.js"></script>
 </body>
+
 </html>

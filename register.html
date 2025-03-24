@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
   <meta name="author" content="David Chukwudi Igberi">
   <link rel="stylesheet" href="styles/project.css">
 </head>
+
 <body>
   <header>
     <nav>
@@ -68,6 +70,15 @@
       <label for="resume-date">Date Available to Resume</label>
       <input type="date" id="resume-date" required>
 
+      <label for="username">Username</label>
+      <input type="text" id="username" name="username" placeholder="Choose a username" required>
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" placeholder="Create a password" required>
+
+      <label for="confirm-password">Confirm Password</label>
+      <input type="password" id="confirm-password" name="confirm-password" placeholder="Re-enter password" required>
+
       <button type="submit">Register</button>
     </form>
   </section>
@@ -78,4 +89,5 @@
   </footer>
   <script src="scripts/register.js"></script>
 </body>
+
 </html>

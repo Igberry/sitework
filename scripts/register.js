@@ -36,7 +36,11 @@ const countries = [
 ];
 
 const sexes = ["Male", "Female"];
-const courses = ["Web Development", "Mobile App Development", "Cloud Computing", "Data Science", "Graphic Design", "Digital Marketing", "Cybersecurity", "Artificial Intelligence", "Blockchain Technology", "Project Management"];
+const courses = [
+  "Web Development", "Mobile App Development", "Cloud Computing",
+  "Data Science", "Graphic Design", "Digital Marketing",
+  "Cybersecurity", "Artificial Intelligence", "Blockchain Technology", "Project Management"
+];
 
 // Function to populate dropdowns
 function populateDropdown(id, options) {
@@ -58,13 +62,45 @@ populateDropdown("course", courses);
 document.getElementById("registration-form").addEventListener("submit", async function (event) {
   event.preventDefault();
 
+  const fullName = document.getElementById("full-name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const dob = document.getElementById("dob").value;
+  const sex = document.getElementById("sex").value;
+  const country = document.getElementById("country").value;
+  const state = document.getElementById("state").value.trim();
+  const city = document.getElementById("city").value.trim();
+  const address = document.getElementById("address").value.trim();
+  const course = document.getElementById("course").value;
+  const resumeDate = document.getElementById("resume-date").value;
+  const username = document.getElementById("username").value.trim();
+  const password = document.getElementById("password").value;
+  const confirmPassword = document.getElementById("confirm-password").value;
+
+  // Validate password match
+  if (password !== confirmPassword) {
+    alert("Passwords do not match. Please try again.");
+    return;
+  }
+
+  // Basic password validation (minimum 6 characters)
+  if (password.length < 6) {
+    alert("Password must be at least 6 characters long.");
+    return;
+  }
+
   const formData = {
-    name: document.getElementById("name").value,
-    email: document.getElementById("email").value,
-    phone: document.getElementById("phone").value,
-    country: document.getElementById("country").value,
-    sex: document.getElementById("sex").value,
-    course: document.getElementById("course").value
+    fullName,
+    email,
+    dob,
+    sex,
+    country,
+    state,
+    city,
+    address,
+    course,
+    resumeDate,
+    username,
+    password
   };
 
   try {
@@ -79,6 +115,7 @@ document.getElementById("registration-form").addEventListener("submit", async fu
     const result = await response.json();
     if (response.ok) {
       alert("Registration successful! " + result.message);
+      document.getElementById("registration-form").reset();
     } else {
       alert("Error: " + result.message);
     }
