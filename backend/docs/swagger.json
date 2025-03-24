@@ -2,7 +2,8 @@
     "swagger": "2.0",
     "info": {
         "title": "Online Learning Platform API",
-        "version": "1.0.0"
+        "version": "1.0.0",
+        "description": "API for managing courses and user registration"
     },
     "paths": {
         "/courses": {
@@ -32,6 +33,33 @@
                     }
                 }
             }
+        },
+        "/register": {
+            "post": {
+                "summary": "Register a new user",
+                "description": "Creates a new user in the database",
+                "parameters": [
+                    {
+                        "name": "body",
+                        "in": "body",
+                        "required": true,
+                        "schema": {
+                            "$ref": "#/definitions/User"
+                        }
+                    }
+                ],
+                "responses": {
+                    "201": {
+                        "description": "User registered successfully"
+                    },
+                    "400": {
+                        "description": "Invalid input"
+                    },
+                    "500": {
+                        "description": "Server error"
+                    }
+                }
+            }
         }
     },
     "definitions": {
@@ -48,6 +76,38 @@
                     "type": "number"
                 }
             }
+        },
+        "User": {
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string"
+                },
+                "email": {
+                    "type": "string",
+                    "format": "email"
+                },
+                "country": {
+                    "type": "string"
+                },
+                "sex": {
+                    "type": "string",
+                    "enum": [
+                        "Male",
+                        "Female"
+                    ]
+                },
+                "course": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "name",
+                "email",
+                "country",
+                "sex",
+                "course"
+            ]
         }
     }
 }

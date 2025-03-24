@@ -1,0 +1,54 @@
+### Test API Root
+GET http://localhost:3000/register
+
+### Test Register User
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+    "fullName": "John Doe",
+    "email": "johndoe@example.com",
+    "country": "USA",
+    "sex": "Male",
+    "course": "Data Science"
+}
+
+### Update User (Replace USER_ID with actual ID)
+PUT http://localhost:3000/register/67e1650a15e833bb051c57a5
+Content-Type: application/json
+
+{
+    "fullName": "John Doe Denson",
+    "email": "johndoe@gmail.com",
+    "course": "Web Development"
+}
+
+### Delete User (Replace USER_ID with actual ID)
+DELETE http://localhost:3000/register/USER_ID
+
+### Get All Courses
+GET http://localhost:3000/courses
+
+### Add New Course
+POST http://localhost:3000/courses
+Content-Type: application/json
+
+{
+    "title": "React for Beginners",
+    "description": "Learn the basics of React.js",
+    "price": 49.99
+}
+
+### Update Course
+PUT http://localhost:3000/courses/{course_id}
+Content-Type: application/json
+
+{
+    "title": "Advanced React",
+    "description": "Master React.js",
+    "price": 79.99
+}
+
+### Delete Course
+DELETE http://localhost:3000/courses/{course_id}
+
