@@ -1,4 +1,4 @@
-const passport = require('passport');
+const passport = require('../config/passport');
 
 exports.googleAuth = passport.authenticate('google', { scope: ['profile', 'email'] });
 
