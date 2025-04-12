@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Details - EduLearn</title>
+    <meta name="description" content="Explore detailed information about our courses at EduLearn.">
+    <meta name="author" content="David Chukwudi Igberi">
+    <link rel="icon" type="image/webp" href="images/hero1.webp">
+    <link rel="stylesheet" href="styles/project.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="logo">EduLearn</div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="courses.html">Courses</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="register.html">Register</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="course-details">
+            <div class="course-banner">
+                <img id="course-image" src="images/default.jpg" alt="Course Image">
+            </div>
+            <div class="course-content">
+                <h1 id="course-title">Course Title</h1>
+                <p id="course-description">Course details will be displayed here.</p>
+
+                <h3>What You Will Learn</h3>
+                <ul id="course-topics"></ul>
+
+                <h3>Course Benefits</h3>
+                <ul id="course-benefits"></ul>
+
+                <a href="register.html" class="enroll-btn">Enroll Now</a>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>David Chukwudi Igberi - WDD131 Dynamic Web Fundamentals - Project</p>
+        <p>&copy; 2024 EduLearn. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const courseCards = document.querySelectorAll(".course-card");
+            courseCards.forEach(card => {
+                card.addEventListener("click", function () {
+                    const courseId = this.getAttribute("data-course");
+                    if (courseId) {
+                        localStorage.setItem("selectedCourse", courseId); // Save course ID
+                        window.location.href = `course-details.html?course=${courseId}`;
+                    }
+                });
+            });
+        });
+
+        const courses = {
+            "web-development": {
+                "title": "Web Development",
+                "description": "Web development is the foundation of the internet, enabling individuals and businesses to create interactive and visually appealing websites. This course covers the essential web technologies including HTML, CSS, and JavaScript. Students will learn how to structure webpages using HTML, style them effectively with CSS, and make them dynamic using JavaScript. The course also explores responsive design to ensure websites function seamlessly across different devices. Additionally, students will delve into frontend frameworks like React or Vue.js and backend development with Node.js and databases like MongoDB or MySQL. By the end of the course, students will have built multiple projects, including personal portfolios, business websites, and interactive web applications. Whether you're looking to start a career in web development or enhance your skills, this course provides a comprehensive introduction to building modern, professional websites.",
+                "image": "images/webdev.jpg",
+                "topics": ["HTML, CSS & JavaScript", "React & Frontend Frameworks", "Backend Development with Node.js"],
+                "benefits": ["Build real-world projects", "Industry-relevant skills", "Certification upon completion"]
+            },
+            "mobile-app-development": {
+                "title": "Mobile App Development",
+                "description": "Mobile app development is an exciting field that allows developers to create applications for Android and iOS devices. This course teaches native and cross-platform app development, covering tools like Flutter, React Native, Kotlin, Swift, and Java. Students will learn how to build user-friendly interfaces, manage databases, and integrate APIs for enhanced functionality. The course also includes topics on UI/UX design, ensuring apps are visually appealing and easy to use. Emphasis is placed on performance optimization, debugging techniques, and deploying apps to Google Play Store and the Apple App Store. By the end of the course, students will have created several mobile applications, ranging from basic utility apps to complex, database-driven applications. This course is ideal for beginners and experienced developers looking to expand into mobile development.",
+                "image": "images/mobappdev.jpg",
+                "topics": ["Flutter & Dart", "React Native", "App Deployment"],
+                "benefits": ["Hands-on projects", "Expert mentorship", "Publishing on app stores"]
+            },
+            "data-science": {
+                title: "Data Science",
+                description: `Data Science is one of the most in-demand fields in the tech industry today. 
+  This course provides a comprehensive introduction to data science concepts, including data analysis, machine learning, and artificial intelligence. 
+  Students will learn Python programming for data science, covering libraries such as Pandas, NumPy, and Scikit-learn. 
+  They will explore data visualization techniques using Matplotlib and Seaborn, enabling them to interpret and present insights effectively. 
+  The course also delves into machine learning models, regression analysis, classification, clustering, and deep learning using TensorFlow and Keras. 
+  Students will work with real-world datasets, handling data preprocessing, feature engineering, and model evaluation. 
+  Additionally, they will gain knowledge of big data technologies like Hadoop and Spark. 
+  By the end of this course, students will have hands-on experience in building predictive models, automating data pipelines, and deploying AI-powered applications. 
+  This course is ideal for anyone looking to start a career in data science, AI, or analytics. 
+  Whether you’re a beginner or an experienced professional, this course will equip you with the essential skills needed to thrive in the fast-growing field of data science.`,
+                image: "images/datasc.jpg",
+                topics: ["Python for Data Science", "Machine Learning & AI", "Data Visualization"],
+                benefits: ["Industry-relevant projects", "Work with real datasets", "Career opportunities in AI"]
+            },
+
+            "cybersecurity": {
+                title: "Cybersecurity",
+                description: `Cybersecurity is a critical field in today’s digital age, where cyber threats are increasing daily. 
+  This course provides a deep understanding of cybersecurity principles, covering ethical hacking, penetration testing, and network security. 
+  Students will learn how to identify vulnerabilities in systems, conduct security assessments, and implement defensive strategies to protect digital assets. 
+  The course includes hands-on exercises on cryptography, malware analysis, firewalls, intrusion detection systems, and security policies. 
+  Students will explore the latest trends in cybersecurity, such as ransomware attacks, phishing, and zero-day vulnerabilities. 
+  They will also learn about cybersecurity laws, compliance regulations, and frameworks like ISO 27001 and NIST. 
+  Practical labs will teach penetration testing techniques using tools like Kali Linux, Metasploit, and Wireshark. 
+  By the end of the course, students will be equipped with the knowledge and skills to secure networks, prevent cyber attacks, and respond to security incidents effectively. 
+  This course is ideal for aspiring cybersecurity professionals, IT administrators, and anyone interested in protecting digital systems.`,
+                image: "images/cyber.jpg",
+                topics: ["Ethical Hacking", "Network Security", "Cyber Threats & Defense"],
+                benefits: ["Practical cybersecurity skills", "Hands-on penetration testing", "Industry certifications"]
+            },
+
+            "digital-marketing": {
+                title: "Digital Marketing",
+                description: `Digital marketing is an essential skill for businesses and individuals looking to grow their online presence. 
+  This course covers the fundamentals of digital marketing, including search engine optimization (SEO), content marketing, social media marketing, and paid advertising. 
+  Students will learn how to create engaging content that attracts and converts audiences across platforms like Facebook, Instagram, Twitter, LinkedIn, and YouTube. 
+  They will also explore Google Ads, Facebook Ads, and email marketing strategies to generate leads and increase brand awareness. 
+  The course dives into analytics tools like Google Analytics and Facebook Insights to measure campaign performance and optimize marketing efforts. 
+  Additional topics include influencer marketing, affiliate marketing, and conversion rate optimization. 
+  Students will gain hands-on experience by running real marketing campaigns and analyzing their effectiveness. 
+  By the end of the course, they will have a portfolio of successful campaigns and the skills to work as digital marketers, content creators, or social media managers. 
+  Whether you are a business owner or an aspiring marketer, this course will provide you with the expertise needed to thrive in the competitive world of digital marketing.`,
+                image: "images/digital.jpg",
+                topics: ["SEO & Content Marketing", "Social Media Strategies", "Paid Advertising"],
+                benefits: ["Grow businesses online", "Build a portfolio", "Work as a digital marketer"]
+            },
+
+            "artificial-intelligence": {
+                title: "Artificial Intelligence",
+                description: `Artificial Intelligence (AI) is transforming industries worldwide, from healthcare to finance and automation. 
+  This course introduces students to AI fundamentals, deep learning, and neural networks. 
+  Students will explore AI-powered technologies, such as computer vision, natural language processing (NLP), and reinforcement learning. 
+  The course covers machine learning algorithms, decision trees, deep learning frameworks like TensorFlow and PyTorch, and model deployment. 
+  Students will build AI models that can recognize speech, analyze images, and make predictions based on real-world data. 
+  Hands-on projects include chatbot development, sentiment analysis, and self-learning systems. 
+  The course also discusses ethical AI, bias in algorithms, and the future of AI applications. 
+  By the end of this course, students will have built multiple AI applications and gained the skills needed to work in AI development, research, or automation industries. 
+  Whether you are a beginner or an advanced programmer, this course will provide you with the knowledge to harness the power of AI and create intelligent systems.`,
+                image: "images/ai.jpg",
+                topics: ["Neural Networks", "Natural Language Processing", "AI Model Deployment"],
+                benefits: ["Work with AI models", "Build intelligent applications", "Career in AI development"]
+            },
+
+            "cloud-computing": {
+                title: "Cloud Computing",
+                description: `Cloud computing is revolutionizing the way businesses and individuals store, process, and access data. 
+  This course provides an in-depth introduction to cloud computing, covering industry-leading platforms such as AWS, Google Cloud, and Microsoft Azure. 
+  Students will learn about cloud infrastructure, virtualization, networking, and storage solutions. 
+  The course also explores serverless computing, cloud security best practices, and cost optimization strategies. 
+  Hands-on projects will include setting up virtual machines, deploying applications, and managing cloud databases. 
+  Students will also learn how to use cloud automation tools, such as Terraform and Kubernetes, to streamline deployments. 
+  Emphasis will be placed on securing cloud environments and complying with industry standards. 
+  By the end of the course, students will have the skills to design, deploy, and manage cloud-based solutions efficiently. 
+  This course is ideal for IT professionals, software developers, and anyone looking to gain expertise in cloud computing. 
+  Whether you are preparing for cloud certifications like AWS Certified Solutions Architect or want to enhance your cloud development skills, this course will equip you with the knowledge to succeed in the rapidly evolving cloud industry.`,
+                image: "images/cloud.jpg",
+                topics: ["AWS & Google Cloud", "Serverless Computing", "Cloud Security"],
+                benefits: ["Industry-standard tools", "Hands-on experience", "Cloud certifications"]
+            },
+
+            "graphic-design": {
+                title: "Graphic Design",
+                description: `Graphic design is a powerful skill that allows individuals to communicate ideas visually through compelling designs. 
+  This course introduces students to fundamental design principles, including composition, typography, color theory, and branding. 
+  Students will learn how to use industry-standard software such as Adobe Photoshop, Illustrator, and Figma to create professional-grade graphics. 
+  The course covers various aspects of design, including logo creation, digital illustration, marketing materials, and UI/UX design. 
+  Practical exercises will help students develop their creativity and technical skills by working on real-world design projects. 
+  They will explore how to design social media posts, business cards, flyers, and website interfaces. 
+  Additionally, students will learn about user experience (UX) principles to create intuitive and user-friendly designs. 
+  By the end of the course, students will have built an impressive portfolio showcasing their design work. 
+  This course is perfect for aspiring graphic designers, digital artists, content creators, and anyone looking to enhance their creative abilities. 
+  Whether you are a beginner or an experienced designer, this course will help you refine your skills and establish a strong foundation in graphic design.`,
+                image: "images/graphics.jpg",
+                topics: ["Adobe Photoshop & Illustrator", "Branding & Logo Design", "UI/UX Principles"],
+                benefits: ["Create stunning visuals", "Work on creative projects", "Build a strong portfolio"]
+            },
+
+            "blockchain-technology": {
+                title: "Blockchain Technology",
+                description: `Blockchain technology is transforming industries by enabling secure, transparent, and decentralized transactions. 
+  This course provides an in-depth understanding of blockchain fundamentals, including how distributed ledgers work and the principles behind cryptocurrencies like Bitcoin and Ethereum. 
+  Students will explore smart contracts using Solidity, learning how to develop decentralized applications (DApps). 
+  The course covers blockchain consensus mechanisms, cryptographic hashing, and tokenomics. 
+  Hands-on projects include deploying smart contracts, creating decentralized finance (DeFi) applications, and working with NFT platforms. 
+  Additionally, students will learn about emerging blockchain trends, such as Web3, interoperability, and enterprise blockchain solutions. 
+  Security and regulatory considerations will also be discussed to ensure students understand compliance and legal aspects of blockchain development. 
+  By the end of this course, students will have a strong grasp of blockchain programming, decentralized networks, and the potential of blockchain across industries. 
+  Whether you are a developer, entrepreneur, or enthusiast, this course provides the knowledge and skills to thrive in the blockchain space.`,
+                image: "images/blockchain.jpg",
+                topics: ["Blockchain Basics", "Smart Contracts with Solidity", "Crypto & Web3"],
+                benefits: ["Work on blockchain projects", "Develop decentralized applications", "Career in blockchain tech"]
+            },
+
+            "project-management": {
+                title: "Project Management",
+                description: `Project management is essential for ensuring the successful execution of projects in any industry. 
+  This course provides a deep dive into project management methodologies, including Agile, Scrum, and Waterfall. 
+  Students will learn how to plan, execute, monitor, and close projects effectively while managing risks and resources. 
+  Key topics include project scheduling, budgeting, stakeholder communication, and leadership in project environments. 
+  The course also covers Agile frameworks, sprint planning, backlog grooming, and collaboration using tools like Jira and Trello. 
+  Risk management strategies and quality control processes will be explored to ensure project success. 
+  Practical case studies will help students apply theoretical knowledge to real-world scenarios. 
+  Additionally, the course prepares students for industry-recognized certifications such as PMP (Project Management Professional) and Scrum Master certifications. 
+  By the end of the course, students will have the skills to lead teams, manage complex projects, and deliver successful outcomes. 
+  Whether you are an aspiring project manager or an experienced professional looking to refine your skills, this course will provide the expertise needed to excel in project management.`,
+                image: "images/promangt.jpg",
+                topics: ["Agile & Scrum Methodologies", "Risk Management", "Leadership in Projects"],
+                benefits: ["Manage teams effectively", "Gain leadership skills", "Project management certification"]
+            },
+        };
+
+        if (window.location.pathname.includes("course-details.html")) {
+            const urlParams = new URLSearchParams(window.location.search);
+            const courseId = urlParams.get("course");
+
+            if (courses[courseId]) {
+                document.getElementById("course-title").textContent = courses[courseId].title;
+                document.getElementById("course-image").src = courses[courseId].image;
+                document.getElementById("course-description").textContent = courses[courseId].description;
+
+                // Populate topics
+                const topicsList = document.getElementById("course-topics");
+                topicsList.innerHTML = "";
+                courses[courseId].topics.forEach(topic => {
+                    const li = document.createElement("li");
+                    li.textContent = topic;
+                    topicsList.appendChild(li);
+                });
+
+                // Populate benefits
+                const benefitsList = document.getElementById("course-benefits");
+                benefitsList.innerHTML = "";
+                courses[courseId].benefits.forEach(benefit => {
+                    const li = document.createElement("li");
+                    li.textContent = benefit;
+                    benefitsList.appendChild(li);
+                });
+            } else {
+                document.getElementById("course-title").textContent = "Course Not Found";
+                document.getElementById("course-description").textContent = "The course you are looking for does not exist.";
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('nav-links');
+
+            hamburger.addEventListener('click', function () {
+                navLinks.classList.toggle('active');
+                hamburger.classList.toggle('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

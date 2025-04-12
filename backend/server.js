@@ -7,6 +7,8 @@ const mongoose = require('mongoose');
 const swaggerUi = require('swagger-ui-express');
 const fs = require('fs');
 const path = require('path');
+const contactRoutes = require("./routes/contact");
+const dashboardRoutes = require("./routes/dashboard");
 
 // Import Authentication Middleware and Routes
 const authRoutes = require('./routes/auth');
@@ -17,6 +19,8 @@ const PORT = process.env.PORT ? parseInt(process.env.PORT, 10) : 3000;
 
 app.use(cors());
 app.use(express.json());
+app.use("/contact", contactRoutes);
+app.use("/dashboard", dashboardRoutes);
 
 // Use Authentication Routes
 app.use('/auth', authRoutes.router);
@@ -42,6 +46,16 @@ app.use('/courses', authMiddleware, courseRoutes);
 app.get('/', (req, res) => {
     res.send('Backend is Running');
 });
+app.get("/courses", async (req, res) => {
+    try {
+        const courses = await CourseModel.find(); // Fetch from MongoDB
+        res.json(courses);
+    } catch (error) {
+        console.error("Error fetching courses:", error);
+        res.status(500).json({ message: "Failed to load courses" });
+    }
+});
+
 
 // Start Server
 app.listen(PORT, () => {

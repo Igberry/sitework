@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,30 +10,28 @@
   <link rel="icon" type="image/webp" href="images/hero1.webp">
   <link rel="stylesheet" href="styles/project.css">
 </head>
+
 <body>
 
   <!-- Reused Header from Home Page -->
   <header>
     <nav>
-        <div class="logo">EduLearn</div>
-        <ul class="nav-links" id="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="courses.html">Courses</a></li>
-          <li><a href="about-us.html">About Us</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-        <div class="hamburger" id="hamburger">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
-        </div>
-      </nav>
+      <div class="logo">EduLearn</div>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="index.html">Home</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+      </div>
+    </nav>
   </header>
 
   <!-- Dashboard Main Section -->
   <section class="dashboard">
     <div class="sidebar">
-      <h2>Welcome, Student</h2>
+      <h2 id="welcomeMessage">Welcome, Student</h2>
       <ul>
         <li><a href="#" id="profile">Profile</a></li>
         <li><a href="#" id="myCourses">My Courses</a></li>
@@ -40,8 +39,9 @@
         <li><a href="#" id="schedule">Schedule</a></li>
         <li><a href="#" id="resources">Resources</a></li>
         <li><a href="#" id="settings">Settings</a></li>
-        <li><a href="#" id="logout">Logout</a></li>
       </ul>
+      <button id="logoutBtn">Logout</button>
+
     </div>
 
     <div class="content">
@@ -60,4 +60,5 @@
 
   <script src="scripts/project.js"></script>
 </body>
+
 </html>

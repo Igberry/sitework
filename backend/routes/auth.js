@@ -2,6 +2,7 @@ const express = require('express');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const User = require('../models/user');
+
 const router = express.Router();
 
 let refreshTokens = []; // Temporary storage (Consider Redis/DB for production)
@@ -43,27 +44,40 @@ const authMiddleware = (req, res, next) => {
 // Register User
 router.post('/register', async (req, res) => {
     try {
-        const { fullName, email, country, sex, course, username, password } = req.body;
+        const { fullName, email, dob, sex, country, state, city, address, course, resumeDate, username, password } = req.body;
+
+        // Ensure all required fields are present
+        if (!fullName || !email || !dob || !sex || !country || !state || !city || !address || !course || !resumeDate || !username || !password) {
+            return res.status(400).json({ message: "All fields are required!" });
+        }
 
         // Check if email already exists
         const existingUser = await User.findOne({ email });
-        if (existingUser) return res.status(400).json({ message: 'Email already registered' });
+        if (existingUser) {
+            return res.status(400).json({ message: "Email already registered" });
+        }
 
+        // Hash Password
         const hashedPassword = await bcrypt.hash(password, 10);
-        const newUser = new User({ fullName, email, country, sex, course, username, password: hashedPassword });
+
+        // Create New User
+        const newUser = new User({ fullName, email, dob, sex, country, state, city, address, course, resumeDate, username, password: hashedPassword });
         await newUser.save();
 
-        res.status(201).json({ message: 'User registered successfully' });
+        res.status(201).json({ message: "User registered successfully" });
+
     } catch (err) {
-        res.status(500).json({ message: 'Registration failed', error: err.message });
+        console.error("Registration Error:", err);  // Log error to console
+        res.status(500).json({ message: "Error registering user", error: err });
     }
 });
+
 
 // Login User
 router.post('/login', async (req, res) => {
     try {
-        const { email, password } = req.body;
-        const user = await User.findOne({ email });
+        const { username, password } = req.body;
+        const user = await User.findOne({ username });
         if (!user) return res.status(400).json({ message: 'User not found' });
 
         const isMatch = await bcrypt.compare(password, user.password);
@@ -72,7 +86,13 @@ router.post('/login', async (req, res) => {
         const accessToken = generateAccessToken(user);
         const refreshToken = generateRefreshToken(user);
 
-        res.json({ accessToken, refreshToken });
+        res.json({
+            accessToken,
+            refreshToken,
+            fullName: user.fullName,
+            userId: user._id  // Sending userId for future use
+        });
+
     } catch (err) {
         res.status(500).json({ message: 'Login failed', error: err.message });
     }
@@ -98,8 +118,32 @@ router.post('/refresh', (req, res) => {
 // Logout - Remove Refresh Token
 router.post('/logout', (req, res) => {
     const { token } = req.body;
+
+    if (!token) {
+        return res.status(400).json({ message: "Token is required for logout" });
+    }
+
+    if (!refreshTokens.includes(token)) {
+        return res.status(400).json({ message: "Invalid token" });
+    }
+
+    // Remove token from refreshTokens list
     refreshTokens = refreshTokens.filter(rt => rt !== token);
-    res.json({ message: 'Logged out successfully' });
+
+    res.status(200).json({ message: "Logged out successfully" });
+});
+
+
+// Get User Profile
+router.get('/profile', authMiddleware, async (req, res) => {
+    try {
+        const user = await User.findById(req.user.id).select('-password'); // Exclude password
+        if (!user) return res.status(404).json({ message: 'User not found' });
+
+        res.json(user);
+    } catch (error) {
+        res.status(500).json({ message: 'Error fetching profile', error: error.message });
+    }
 });
 
 // Export Router and Middleware

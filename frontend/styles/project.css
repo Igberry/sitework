@@ -245,6 +245,8 @@ nav {
     justify-content: center;
     align-items: center;
     background-color: #f4f4f4;
+    padding-bottom: 100px;
+    padding-top: 50px;
 }
 
 .login-container {
@@ -528,6 +530,10 @@ footer {
     transform: translateY(-5px);
 }
 
+.course-details {
+    padding-top: 50px;
+}
+
 /* Dashboard */
 .dashboard {
     display: flex;
@@ -655,6 +661,99 @@ button:hover {
     color: #333;
 }
 
+#course-image {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.course-content {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    text-align: center;
+}
+
+/* Course Title */
+.course-content h1 {
+    font-size: 28px;
+    color: #007BFF;
+    margin-bottom: 15px;
+}
+
+/* Course Description */
+.course-content p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+    padding: 0 15px;
+}
+
+/* Section Headings */
+.course-content h3 {
+    font-size: 22px;
+    color: #333;
+    margin-top: 30px;
+    border-bottom: 2px solid #007BFF;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Course Topics & Benefits Lists */
+.course-content ul {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 15px;
+}
+
+.course-content ul li {
+    font-size: 18px;
+    background: #e3f2fd;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Adding icons (if you use FontAwesome or similar) */
+.course-content ul li::before {
+    content: "✔";
+    /* Checkmark icon */
+    color: #007BFF;
+    font-weight: bold;
+}
+
+.enroll-btn {
+    display: inline-block;
+    background-color: #007BFF;
+    /* Blue primary color */
+    color: white;
+    padding: 12px 24px;
+    border-radius: 6px;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    text-align: center;
+    transition: background 0.3s ease-in-out;
+    margin-top: 20px;
+}
+
+.enroll-btn:hover {
+    background-color: green;
+    /* Darker blue on hover */
+}
+
+
 /* Mobile Menu */
 @media (max-width: 768px) {
     .nav-links {
@@ -753,5 +852,28 @@ button:hover {
 
     .content {
         padding: 1rem;
+    }
+
+    .course-content {
+        width: 90%;
+        padding: 15px;
+    }
+
+    .course-content h1 {
+        font-size: 24px;
+    }
+
+    .course-content p,
+    .course-content ul li {
+        font-size: 16px;
+    }
+
+    .enroll-btn {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    #course-image {
+        max-width: 100%;
     }
 }

@@ -2,29 +2,52 @@
 GET http://localhost:3000/register
 
 ### Test Register User
-POST http://localhost:3000/register
+POST http://localhost:3000/auth/register
 Content-Type: application/json
 
 {
-    "fullName": "John Doe",
+    "fullName": "Immaculate Sylvester",
+    "email": "imma@example.com",
+    "dob": "20/March/1997",
+    "sex": "Female",
+    "country": "Ghana",
+    "state": "Western Region",
+    "city": "Takoradi",
+    "address": "123 Street, LA",
+    "course": "Cloud Computing",
+    "resumeDate": "4/April/2025",
+    "username": "immasyl",
+    "password": "Imma12345"
+}
+
+### Login User
+POST http://localhost:3000/auth/login
+Content-Type: application/json
+
+{
+    "username": "johndoe",
+    "password": "12345678"
+}
+
+### Update User (Replace {USER_ID} with actual ID)
+PUT http://localhost:3000/auth/update/{USER_ID}
+Content-Type: application/json
+
+{
+    "fullName": "John Doe Updated",
     "email": "johndoe@example.com",
-    "country": "USA",
+    "dob": "2000-05-15",
     "sex": "Male",
-    "course": "Data Science"
+    "country": "USA",
+    "state": "California",
+    "city": "Los Angeles",
+    "address": "456 Updated Street, LA",
+    "course": "Advanced Web Development",
+    "resumeDate": "2025-05-01"
 }
 
-### Update User (Replace USER_ID with actual ID)
-PUT http://localhost:3000/register/67e1650a15e833bb051c57a5
-Content-Type: application/json
-
-{
-    "fullName": "John Doe Denson",
-    "email": "johndoe@gmail.com",
-    "course": "Web Development"
-}
-
-### Delete User (Replace USER_ID with actual ID)
-DELETE http://localhost:3000/register/USER_ID
+### Delete User (Replace {USER_ID} with actual ID)
+DELETE http://localhost:3000/auth/delete/{USER_ID}
 
 ### Get All Courses
 GET http://localhost:3000/courses
@@ -39,8 +62,8 @@ Content-Type: application/json
     "price": 49.99
 }
 
-### Update Course
-PUT http://localhost:3000/courses/{course_id}
+### Update Course (Replace {COURSE_ID} with actual ID)
+PUT http://localhost:3000/courses/{COURSE_ID}
 Content-Type: application/json
 
 {
@@ -49,6 +72,15 @@ Content-Type: application/json
     "price": 79.99
 }
 
-### Delete Course
-DELETE http://localhost:3000/courses/{course_id}
+### Delete Course (Replace {COURSE_ID} with actual ID)
+DELETE http://localhost:3000/courses/{COURSE_ID}
 
+### Contact Form Submission
+POST http://localhost:3000/contact
+Content-Type: application/json
+
+{
+    "name": "John Doe",
+    "email": "johndoe@example.com",
+    "message": "I need help with my course."
+}
