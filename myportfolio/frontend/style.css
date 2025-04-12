@@ -50,8 +50,8 @@ body {
     transition: background 0.3s;
 }
 
-.btn:hover {
-    background: #52e1c3;
+.btn :hover {
+    color: green;
 }
 
 .section {
@@ -103,6 +103,17 @@ h2 {
 .project-card h3 {
     color: var(--accent);
     margin-bottom: 0.5rem;
+}
+
+.project-card a {
+    color: black;
+    background: var(--accent);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.project-card a :hover {
+    color: var(--dark);
 }
 
 form {
@@ -163,12 +174,20 @@ textarea {
     color: #ffffff;
 }
 
+.light-theme .footer p {
+    color: #ffffff;
+}
+
 .light-theme span {
-    color: #ffffff
+    color: #ffffff;
 }
 
 .light-theme .subtitle {
-    color: #ffffff
+    color: #ffffff;
+}
+
+.light-theme a {
+    color: #ffffff;
 }
 
 .light-theme h2,
@@ -193,6 +212,35 @@ textarea {
     color: var(--accent);
 }
 
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.social-icon img {
+    width: 30px;
+    height: auto;
+    border-radius: 7px;
+}
+
+.social-icon {
+    font-size: 1.5rem;
+    color: #3498db;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-icon i {
+    font-size: 2rem;
+}
+
+.social-icon:hover {
+    color: #2980b9;
+}
 
 @media (min-width: 768px) {
     .projects-grid {
