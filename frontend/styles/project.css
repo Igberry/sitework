@@ -753,6 +753,9 @@ button:hover {
     /* Darker blue on hover */
 }
 
+#course-image {
+    margin-top: 50px;
+}
 
 /* Mobile Menu */
 @media (max-width: 768px) {
